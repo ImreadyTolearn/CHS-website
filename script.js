@@ -1,23 +1,24 @@
 <script>
   // Hero Slideshow Logic
-  document.addEventListener('DOMContentLoaded', () => {
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
 
-    function showSlide() {
-      slides.forEach((slide, index) => {
-        slide.classList.toggle('active', index === currentSlide);
-      });
+  function showSlide() {
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('active', index === currentSlide);
+    });
 
-      currentSlide = (currentSlide + 1) % slides.length;
-      setTimeout(showSlide, 5000);
-    }
+    currentSlide = (currentSlide + 1) % slides.length;
+    setTimeout(showSlide, 5000);
+  }
 
+  // Start slideshow immediately
+  if (slides.length > 0) {
     showSlide();
-  });
+  }
 
   // Robot Slider Logic
-  document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('DOMContentLoaded', () => {
     const robotSlider = document.getElementById('robot-slider');
     const robotCards = robotSlider.children;
     let robotIndex = 0;
@@ -28,6 +29,8 @@
 
     function updateSlider() {
       const cardsPerView = getCardsPerView();
+      const maxIndex = robotCards.length - cardsPerView;
+      if (robotIndex > maxIndex) robotIndex = maxIndex;
       const offset = (100 / cardsPerView) * robotIndex;
       robotSlider.style.transform = `translateX(-${offset}%)`;
     }
@@ -49,7 +52,6 @@
     });
 
     window.addEventListener('resize', () => {
-      robotIndex = 0;
       updateSlider();
     });
 
