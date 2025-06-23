@@ -1,1 +1,4 @@
 /* Additional styles if needed */
+.gradient-bg {
+  background: linear-gradient(to right, #1a2980, #26d0ce);
+}
