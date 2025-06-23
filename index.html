@@ -147,76 +147,83 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-navy text-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">About Our <span class="text-gold">Club</span></h2>
-                <div class="w-20 h-1 bg-gold mx-auto"></div>
-            </div>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-                    <img src="your-image-4.jpg" alt="Robotics team" class="rounded-lg shadow-xl w-full">
-                </div>
-                <div class="md:w-1/2">
-                    <h3 class="text-2xl font-bold mb-4">Who We Are</h3>
-                    <p class="mb-6 text-lg">The Channelview High School Robotics Club is a student-run organization dedicated to inspiring innovation and fostering STEM education through hands-on robotics competitions.</p>
-                    <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
-                    <p class="mb-6 text-lg">We aim to develop technical skills, teamwork, and problem-solving abilities while competing in the <span class="font-bold text-gold">FTC (FIRST Tech Challenge)</span> robotics competitions.</p>
-                    <div class="bg-blue-900 bg-opacity-30 p-6 rounded-lg border-l-4 border-gold">
-                        <p class="italic">"The goal of the club is not just to build robots, but to build future engineers, scientists, and leaders who will drive technological innovation."</p>
-                    </div>
-                </div>
-            </div>
+   <!-- Our Robots Section -->
+<section id="robots" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-navy">Our <span class="text-gold">Robots</span></h2>
+            <p class="text-lg text-gray-700">2024-2025 FTC Season Competition Bots</p>
+            <div class="w-20 h-1 bg-gold mx-auto"></div>
         </div>
-    </section>
 
-    <!-- Our Robots Section -->
-    <section id="robots" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-navy">Our <span class="text-gold">Robots</span></h2>
-                <p class="text-lg text-gray-700">2024-2025 FTC Season Competition Bots</p>
-                <div class="w-20 h-1 bg-gold mx-auto"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- Riptide Card -->
-                <div class="robot-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <div class="gradient-bg h-48 flex items-center justify-center">
-                        <i class="fas fa-robot text-white text-8xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2 text-navy">Riptide</h3>
-                        <p class="text-gray-700 mb-4">Our primary competition bot for the 2024-2025 FTC season, designed for maximum agility and performance in the water-themed challenge.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Omni Wheels</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Custom Arm</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Precision Control</span>
-                        </div>
-                        <button class="bg-navy text-white px-4 py-2 rounded hover:bg-blue-800 transition duration-300">Learn More</button>
-                    </div>
-                </div>
+        <div class="relative overflow-hidden">
+            <div id="robot-slider" class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(0%);">
                 
-                <!-- Flares Card -->
-                <div class="robot-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <div class="gradient-bg h-48 flex items-center justify-center">
-                        <i class="fas fa-fire text-white text-8xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2 text-navy">Flares</h3>
-                        <p class="text-gray-700 mb-4">Our secondary bot specializing in high-speed movement and rapid response capabilities, complementing Riptide's strategy.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">High Torque</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Quick Release</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Dual Mode</span>
+                <!-- Riptide Card -->
+                <div class="min-w-full md:min-w-1/2 px-4">
+                    <div class="robot-card bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="your-image-riptide.jpg" alt="Riptide Robot" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-navy">Riptide</h3>
+                            <p class="text-gray-700 mb-4">Our primary competition bot for the 2024-2025 FTC season, designed for maximum agility and performance in the water-themed challenge.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Omni Wheels</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Custom Arm</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Precision Control</span>
+                            </div>
+                            <button class="bg-navy text-white px-4 py-2 rounded hover:bg-blue-800 transition duration-300">Learn More</button>
                         </div>
-                        <button class="bg-navy text-white px-4 py-2 rounded hover:bg-blue-800 transition duration-300">Learn More</button>
                     </div>
                 </div>
+
+                <!-- Flares Card -->
+                <div class="min-w-full md:min-w-1/2 px-4">
+                    <div class="robot-card bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="your-image-flares.jpg" alt="Flares Robot" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-navy">Flares</h3>
+                            <p class="text-gray-700 mb-4">Our secondary bot specializing in high-speed movement and rapid response capabilities, complementing Riptide's strategy.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">High Torque</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Quick Release</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Dual Mode</span>
+                            </div>
+                            <button class="bg-navy text-white px-4 py-2 rounded hover:bg-blue-800 transition duration-300">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Illuminati Card -->
+                <div class="min-w-full md:min-w-1/2 px-4">
+                    <div class="robot-card bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img src="your-image-illuminati.jpg" alt="Illuminati Robot" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-navy">Illuminati</h3>
+                            <p class="text-gray-700 mb-4">A visionary prototype bot built for autonomous navigation and advanced sensor integration. It pushes the boundaries of perception and prediction.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Vision AI</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Pathfinding</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Experimental Build</span>
+                            </div>
+                            <button class="bg-navy text-white px-4 py-2 rounded hover:bg-blue-800 transition duration-300">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex justify-center space-x-6 mt-6">
+                <button id="prev-slide" class="text-navy hover:text-gold text-3xl focus:outline-none">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next-slide" class="text-navy hover:text-gold text-3xl focus:outline-none">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Team Section -->
     <section id="team" class="py-20 bg-navy text-white">
         <div class="container mx-auto px-6">
