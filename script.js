@@ -34,37 +34,44 @@
     });
 
     // Robot Slider Logic
-    const robotSlider = document.getElementById('robot-slider');
-    if (robotSlider) {
-      const robotCards = robotSlider.children;
-      let robotIndex = 0;
+   const robotSlider = document.getElementById('robot-slider');
+if (robotSlider) {
+  const robotCards = robotSlider.children;
+  let robotIndex = 0;
 
-      function getCardsPerView() {
-        return window.innerWidth >= 768 ? 2 : 1;
-      }
+  function getCardsPerView() {
+    return window.innerWidth >= 768 ? 2 : 1;
+  }
 
-      function updateSlider() {
-        const cardWidth = robotCards[0].offsetWidth + 32; // px-4 = 16px margin each side
-        robotSlider.style.transform = `translateX(-${robotIndex * cardWidth}px)`;
-      }
+  function updateSlider() {
+    const cardWidth = robotCards[0].offsetWidth + 32; // includes margin between cards
+    const cardsPerView = getCardsPerView();
+    const maxIndex = robotCards.length - cardsPerView;
+    robotSlider.style.transform = `translateX(-${robotIndex * cardWidth}px)`;
 
-      document.getElementById('next-slide')?.addEventListener('click', () => {
-        const maxIndex = robotCards.length - getCardsPerView();
-        if (robotIndex < maxIndex) {
-          robotIndex++;
-          updateSlider();
-        }
-      });
+    // Optional: disable arrows when at bounds
+    document.getElementById('prev-slide').disabled = robotIndex === 0;
+    document.getElementById('next-slide').disabled = robotIndex >= maxIndex;
+  }
 
-      document.getElementById('prev-slide')?.addEventListener('click', () => {
-        if (robotIndex > 0) {
-          robotIndex--;
-          updateSlider();
-        }
-      });
-
-      window.addEventListener('resize', updateSlider);
+  document.getElementById('next-slide')?.addEventListener('click', () => {
+    const maxIndex = robotCards.length - getCardsPerView();
+    if (robotIndex < maxIndex) {
+      robotIndex++;
       updateSlider();
     }
   });
+
+  document.getElementById('prev-slide')?.addEventListener('click', () => {
+    if (robotIndex > 0) {
+      robotIndex--;
+      updateSlider();
+    }
+  });
+
+  window.addEventListener('resize', updateSlider);
+  updateSlider();
+}
+    }
+  );
 </script>
