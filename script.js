@@ -1,5 +1,5 @@
 <script>
-  // Hero Slideshow Logic
+  // Hero Slideshow
   let currentSlide = 0;
   const slides = document.querySelectorAll('.slide');
 
@@ -12,12 +12,27 @@
     setTimeout(showSlide, 5000);
   }
 
-  // Start slideshow immediately
-  if (slides.length > 0) {
-    showSlide();
-  }
+  if (slides.length > 0) showSlide();
 
-  // Robot Slider Logic
+  // Mobile menu toggle
+  const mobileMenuButton = document.querySelector('.mobile-menu-button');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+      mobileMenu.classList.add('hidden');
+    });
+  });
+
+  // Robot Slider Logic (THIS IS THE FIXED PART)
   window.addEventListener('DOMContentLoaded', () => {
     const robotSlider = document.getElementById('robot-slider');
     const robotCards = robotSlider.children;
@@ -29,15 +44,13 @@
 
     function updateSlider() {
       const cardsPerView = getCardsPerView();
-      const maxIndex = robotCards.length - cardsPerView;
-      if (robotIndex > maxIndex) robotIndex = maxIndex;
-      const offset = (100 / cardsPerView) * robotIndex;
-      robotSlider.style.transform = `translateX(-${offset}%)`;
+      const cardWidth = robotCards[0].offsetWidth + 32; // +32 for px-4 margin (16px * 2 sides)
+      const offset = robotIndex * cardWidth;
+      robotSlider.style.transform = `translateX(-${offset}px)`;
     }
 
     document.getElementById('next-slide').addEventListener('click', () => {
-      const cardsPerView = getCardsPerView();
-      const maxIndex = robotCards.length - cardsPerView;
+      const maxIndex = robotCards.length - getCardsPerView();
       if (robotIndex < maxIndex) {
         robotIndex++;
         updateSlider();
@@ -52,7 +65,7 @@
     });
 
     window.addEventListener('resize', () => {
-      updateSlider();
+      updateSlider(); // keep position on resize
     });
 
     updateSlider();
