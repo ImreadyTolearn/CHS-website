@@ -1,5 +1,5 @@
 <script>
-  // Hero Slideshow
+  // Slideshow functionality
   let currentSlide = 0;
   const slides = document.querySelectorAll('.slide');
 
@@ -7,21 +7,21 @@
     slides.forEach((slide, index) => {
       slide.classList.toggle('active', index === currentSlide);
     });
-
     currentSlide = (currentSlide + 1) % slides.length;
-    setTimeout(showSlide, 5000);
+    setTimeout(showSlide, 5000); // Change slide every 5 seconds
   }
 
-  if (slides.length > 0) showSlide();
+  showSlide();
 
   // Mobile menu toggle
   const mobileMenuButton = document.querySelector('.mobile-menu-button');
   const mobileMenu = document.querySelector('.mobile-menu');
+
   mobileMenuButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
   });
 
-  // Smooth scrolling
+  // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -43,10 +43,8 @@
     }
 
     function updateSlider() {
-      const cardsPerView = getCardsPerView();
-      const cardWidth = robotCards[0].offsetWidth + 32; // +32 for px-4 margin (16px * 2 sides)
-      const offset = robotIndex * cardWidth;
-      robotSlider.style.transform = `translateX(-${offset}px)`;
+      const cardWidth = robotCards[0].offsetWidth + 32; // px-4 = 16px margin each side
+      robotSlider.style.transform = `translateX(-${robotIndex * cardWidth}px)`;
     }
 
     document.getElementById('next-slide').addEventListener('click', () => {
@@ -64,9 +62,7 @@
       }
     });
 
-    window.addEventListener('resize', () => {
-      updateSlider(); // keep position on resize
-    });
+    window.addEventListener('resize', updateSlider);
 
     updateSlider();
   });
