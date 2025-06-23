@@ -1,3 +1,4 @@
+// Slideshow (hero background) logic
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 
@@ -10,13 +11,28 @@ function showSlide() {
     setTimeout(showSlide, 5000);
 }
 document.addEventListener('DOMContentLoaded', showSlide);
-// Robot slider logic
+
+// Robot carousel logic
 let robotIndex = 0;
 const robotSlider = document.getElementById('robot-slider');
 const robotCards = robotSlider.children;
-const maxIndex = robotCards.length - 2; // show 2 at a time
 
+function getCardsPerView() {
+    // Responsive: 2 per view if screen >= 768px, otherwise 1
+    return window.innerWidth >= 768 ? 2 : 1;
+}
+
+function updateSlider() {
+    const cardsPerView = getCardsPerView();
+    const offset = -(robotIndex * (100 / cardsPerView));
+    robotSlider.style.transform = `translateX(${offset}%)`;
+}
+
+// Add event listeners
 document.getElementById('next-slide').addEventListener('click', () => {
+    const cardsPerView = getCardsPerView();
+    const maxIndex = robotCards.length - cardsPerView;
+
     if (robotIndex < maxIndex) robotIndex++;
     updateSlider();
 });
@@ -26,7 +42,11 @@ document.getElementById('prev-slide').addEventListener('click', () => {
     updateSlider();
 });
 
-function updateSlider() {
-    const offset = -(robotIndex * 50); // 50% per slide
-    robotSlider.style.transform = `translateX(${offset}%)`;
-}
+// Recalculate on resize
+window.addEventListener('resize', () => {
+    robotIndex = 0;
+    updateSlider();
+});
+
+// Initial call
+updateSlider();
