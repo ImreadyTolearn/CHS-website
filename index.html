@@ -147,83 +147,84 @@
         </div>
     </section>
 
-   <!-- Our Robots Section -->
+ <!-- Our Robots Section -->
 <section id="robots" class="py-20 bg-gray-100">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-navy">Our <span class="text-gold">Robots</span></h2>
-            <p class="text-lg text-gray-700">2024-2025 FTC Season Competition Bots</p>
-            <div class="w-20 h-1 bg-gold mx-auto"></div>
-        </div>
-
-        <div class="relative overflow-hidden">
-            <div id="robot-slider" class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(0%);">
-                
-                <!-- Riptide Card -->
-                <div class="min-w-full md:min-w-1/2 px-4">
-                    <div class="robot-card bg-white rounded-lg overflow-hidden shadow-lg">
-                        <img src="your-image-riptide.jpg" alt="Riptide Robot" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2 text-navy">Riptide</h3>
-                            <p class="text-gray-700 mb-4">Our primary competition bot for the 2024-2025 FTC season, designed for maximum agility and performance in the water-themed challenge.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Omni Wheels</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Custom Arm</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Precision Control</span>
-                            </div>
-                            <button class="bg-navy text-white px-4 py-2 rounded hover:bg-blue-800 transition duration-300">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Flares Card -->
-                <div class="min-w-full md:min-w-1/2 px-4">
-                    <div class="robot-card bg-white rounded-lg overflow-hidden shadow-lg">
-                        <img src="your-image-flares.jpg" alt="Flares Robot" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2 text-navy">Flares</h3>
-                            <p class="text-gray-700 mb-4">Our secondary bot specializing in high-speed movement and rapid response capabilities, complementing Riptide's strategy.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">High Torque</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Quick Release</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Dual Mode</span>
-                            </div>
-                            <button class="bg-navy text-white px-4 py-2 rounded hover:bg-blue-800 transition duration-300">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Illuminati Card -->
-                <div class="min-w-full md:min-w-1/2 px-4">
-                    <div class="robot-card bg-white rounded-lg overflow-hidden shadow-lg">
-                        <img src="your-image-illuminati.jpg" alt="Illuminati Robot" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2 text-navy">Illuminati</h3>
-                            <p class="text-gray-700 mb-4">A visionary prototype bot built for autonomous navigation and advanced sensor integration. It pushes the boundaries of perception and prediction.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Vision AI</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Pathfinding</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Experimental Build</span>
-                            </div>
-                            <button class="bg-navy text-white px-4 py-2 rounded hover:bg-blue-800 transition duration-300">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Navigation Buttons -->
-            <div class="flex justify-center space-x-6 mt-6">
-                <button id="prev-slide" class="text-navy hover:text-gold text-3xl focus:outline-none">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button id="next-slide" class="text-navy hover:text-gold text-3xl focus:outline-none">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-        </div>
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-navy">Our <span class="text-gold">Robots</span></h2>
+      <p class="text-lg text-gray-700">2024-2025 FTC Season Competition Bots</p>
+      <div class="w-20 h-1 bg-gold mx-auto"></div>
     </div>
+
+    <div class="relative overflow-hidden">
+      <div id="robot-slider" class="flex transition-transform duration-500 ease-in-out w-full">
+
+        <!-- Riptide Card -->
+        <div class="w-full md:w-1/2 flex-shrink-0 px-4">
+          <div class="robot-card bg-white rounded-lg overflow-hidden shadow-lg">
+            <img src="your-image-riptide.jpg" alt="Riptide Robot" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-navy">Riptide</h3>
+              <p class="text-gray-700 mb-4">Our primary competition bot for the 2024-2025 FTC season, designed for maximum agility and performance in the water-themed challenge.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Omni Wheels</span>
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Custom Arm</span>
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Precision Control</span>
+              </div>
+              <button class="bg-navy text-white px-4 py-2 rounded hover:bg-blue-800 transition duration-300">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flares Card -->
+        <div class="w-full md:w-1/2 flex-shrink-0 px-4">
+          <div class="robot-card bg-white rounded-lg overflow-hidden shadow-lg">
+            <img src="your-image-flares.jpg" alt="Flares Robot" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-navy">Flares</h3>
+              <p class="text-gray-700 mb-4">Our secondary bot specializing in high-speed movement and rapid response capabilities, complementing Riptide's strategy.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">High Torque</span>
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Quick Release</span>
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Dual Mode</span>
+              </div>
+              <button class="bg-navy text-white px-4 py-2 rounded hover:bg-blue-800 transition duration-300">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Illuminati Card -->
+        <div class="w-full md:w-1/2 flex-shrink-0 px-4">
+          <div class="robot-card bg-white rounded-lg overflow-hidden shadow-lg">
+            <img src="your-image-illuminati.jpg" alt="Illuminati Robot" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-navy">Illuminati</h3>
+              <p class="text-gray-700 mb-4">A visionary prototype bot built for autonomous navigation and advanced sensor integration. It pushes the boundaries of perception and prediction.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Vision AI</span>
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Pathfinding</span>
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Experimental Build</span>
+              </div>
+              <button class="bg-navy text-white px-4 py-2 rounded hover:bg-blue-800 transition duration-300">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="flex justify-center space-x-6 mt-6">
+        <button id="prev-slide" class="text-navy hover:text-gold text-3xl focus:outline-none">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="next-slide" class="text-navy hover:text-gold text-3xl focus:outline-none">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
+
     <!-- Team Section -->
     <section id="team" class="py-20 bg-navy text-white">
         <div class="container mx-auto px-6">
