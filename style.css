@@ -2,3 +2,10 @@
 .gradient-bg {
   background: linear-gradient(to right, #1a2980, #26d0ce);
 }
+
+<!-- Ensure the parent div has overflow-x: hidden and child is flex -->
+<div class="overflow-hidden">
+  <div id="robot-slider" class="flex transition-transform duration-500 space-x-8 w-max">
+    <!-- Robot Cards Here -->
+  </div>
+</div>
