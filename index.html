@@ -190,8 +190,12 @@
       </button>
 
       <!-- Slider -->
-      <div class="overflow-hidden">
-        <div id="robot-slider" class="flex transition-transform duration-500 space-x-8">
+          <!-- Ensure the parent div has overflow-x: hidden and child is flex -->
+        <div class="overflow-hidden">
+          <div id="robot-slider" class="flex transition-transform duration-500 space-x-8 w-max">
+            <!-- Robot Cards Here -->
+      </div>
+        </div>
           <!-- Robot 1 -->
           <div class="robot-card flex-shrink-0 w-full md:w-1/2 bg-white rounded-lg overflow-hidden shadow-lg">
             <div class="gradient-bg h-48 flex items-center justify-center">
